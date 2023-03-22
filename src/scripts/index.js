@@ -1,15 +1,15 @@
 
-async function user(){
-    const response = await fetch('https://api.github.com/users/felipedalbert')
+
+async function user(userName){
+    const response = await fetch(`https://api.github.com/users/${userName}`)
     return await response.json()
 }
 
-function getUserProfile(){
-    user().then(userData =>{
+function getUserProfile(userName){
+    user(userName).then(userData =>{
         console.log(userData)
-    })
 
-    let userInfo = `
+        let userInfo = `
         <img src"${userData.avatar_url}" alt="Pic profile"/>
         <div class="data">
             <h1>${userData.name ?? 'Não possuí nome cadastrado 🥺'}</h1>
@@ -17,4 +17,9 @@ function getUserProfile(){
         </div>
     `
     document.querySelector('.profile-data').innerHTML = userInfo
+    })
+
+    
 }
+
+getUserProfile('felipedalbert')
