@@ -1,4 +1,7 @@
-
+document.getElementById('btn-search').addEventListener('click', ()=>{
+    const userNameInputValue = document.getElementById('input-search').value
+    getUserProfile(userNameInputValue)
+})
 
 async function user(userName){
     const response = await fetch(`https://api.github.com/users/${userName}`)
@@ -19,7 +22,4 @@ function getUserProfile(userName){
     document.querySelector('.profile-data').innerHTML = userInfo
     })
 
-    
 }
-
-getUserProfile('felipedalbert')
