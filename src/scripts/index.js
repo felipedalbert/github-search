@@ -1,3 +1,4 @@
+
 async function user(){
     const response = await fetch('https://api.github.com/users/felipedalbert')
     return await response.json()
@@ -15,4 +16,5 @@ function getUserProfile(){
             <p>${userData.bio ?? 'Não possuí bio cadastrada 😢'}</p>
         </div>
     `
+    document.querySelector('.profile-data').innerHTML = userInfo
 }
