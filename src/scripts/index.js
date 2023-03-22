@@ -3,4 +3,10 @@ async function user(){
     return await response.json()
 }
 
-console.log(await user())
+function getUserProfile(){
+    user().then(userData =>{
+        console.log(userData)
+    })
+
+    let userInfo = `<img src"${userData.avatar_url}" alt="Pic profile"`
+}
