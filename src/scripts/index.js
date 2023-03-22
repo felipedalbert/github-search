@@ -8,5 +8,11 @@ function getUserProfile(){
         console.log(userData)
     })
 
-    let userInfo = `<img src"${userData.avatar_url}" alt="Pic profile"`
+    let userInfo = `
+        <img src"${userData.avatar_url}" alt="Pic profile"/>
+        <div class="data">
+            <h1>${userData.name}</h1>
+            <p>${userData.bio}</p>
+        </div>
+    `
 }
