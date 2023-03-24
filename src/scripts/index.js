@@ -3,6 +3,15 @@ document.getElementById('btn-search').addEventListener('click', ()=>{
     getUserProfile(userNameInputValue)
 })
 
+
+document.getElementById('input-search').addEventListener("keyup", (e)=> {
+    const userNameInputValue = e.target.value
+    if (e.key === "Enter") {
+        getUserProfile(userNameInputValue)
+        console.log('oi')
+    }
+})
+
 async function user(userName){
     const response = await fetch(`https://api.github.com/users/${userName}`)
     return await response.json()
