@@ -48,10 +48,13 @@ function getUserRepositories(userName){
         })
 
         document.querySelector('.profile-data').innerHTML += `
-            <div class="repositories section">
-                <h2>Repositórios</h2>
-                <ul>${repositoriesItens}</ul>
+            <div class="info">
+                <div class="repositories section">
+                    <h2>Repositórios</h2>
+                    <ul>${repositoriesItens}</ul>
+                </div>
             </div>
+            
         `
     })
 }
