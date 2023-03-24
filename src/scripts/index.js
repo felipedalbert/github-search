@@ -29,11 +29,15 @@ function getUserProfile(userName){
         repos(userName).then(reposData => console.log(reposData))
 
         let userInfo = `
-        <img src="${userData.avatar_url}" alt="Pic profile">
-        <div class="data">
-            <h1>${userData.name ?? 'Não possuí nome cadastrado 🥺'}</h1>
-            <p>${userData.bio ?? 'Não possuí bio cadastrada 😢'}</p>
+        
+        <div class="info">
+            <img src="${userData.avatar_url}" alt="Pic profile">
+            <div class="data">
+                <h1>${userData.name ?? 'Não possuí nome cadastrado 🥺'}</h1>
+                <p>${userData.bio ?? 'Não possuí bio cadastrada 😢'}</p>
+            </div>
         </div>
+        
     `
     document.querySelector('.profile-data').innerHTML = userInfo
     })
@@ -48,13 +52,10 @@ function getUserRepositories(userName){
         })
 
         document.querySelector('.profile-data').innerHTML += `
-            <div class="info">
-                <div class="repositories section">
-                    <h2>Repositórios</h2>
-                    <ul>${repositoriesItens}</ul>
-                </div>
+            <div class="repositories section">
+                <h2>Repositórios</h2>
+                <ul>${repositoriesItens}</ul>
             </div>
-            
         `
     })
 }
