@@ -13,12 +13,12 @@ document.getElementById('input-search').addEventListener("keyup", (e)=> {
     }
 })
 
-async function user(userName){
+async function searchUser(userName){
     const response = await fetch(`https://api.github.com/users/${userName}`)
     return await response.json()
 }
 
-async function repos(userName){
+async function searchRepos(userName){
     const response = await fetch(`https://api.github.com/users/${userName}/repos`)
     return await response.json()
 }
