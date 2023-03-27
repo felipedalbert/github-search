@@ -1,3 +1,5 @@
+import { baseUrl, reposQtd } from "./variables"
+
 document.getElementById('btn-search').addEventListener('click', ()=>{
     const userNameInputValue = document.getElementById('input-search').value
     getUserProfile(userNameInputValue)
@@ -14,12 +16,12 @@ document.getElementById('input-search').addEventListener("keyup", (e)=> {
 })
 
 async function searchUser(userName){
-    const response = await fetch(`https://api.github.com/users/${userName}`)
+    const response = await fetch(`${baseUrl}/${userName}`)
     return await response.json()
 }
 
 async function searchRepos(userName){
-    const response = await fetch(`https://api.github.com/users/${userName}/repos?per_page=10`)
+    const response = await fetch(`${baseUrl}/${userName}/repos?per_page=${reposQtd}`)
     return await response.json()
 }
 
