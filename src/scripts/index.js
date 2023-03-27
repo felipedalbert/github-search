@@ -1,4 +1,4 @@
-import { baseUrl, reposQtd } from "./variables"
+import { baseUrl, reposQtd } from "./variables.js"
 
 document.getElementById('btn-search').addEventListener('click', ()=>{
     const userNameInputValue = document.getElementById('input-search').value
