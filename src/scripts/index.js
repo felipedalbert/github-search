@@ -1,4 +1,5 @@
-import { baseUrl, reposQtd } from "./variables.js"
+import { searchUser } from "./services/user.js"
+import { searchRepos } from "./services/repositories.js"
 
 document.getElementById('btn-search').addEventListener('click', ()=>{
     const userNameInputValue = document.getElementById('input-search').value
@@ -15,20 +16,8 @@ document.getElementById('input-search').addEventListener("keyup", (e)=> {
     }
 })
 
-async function searchUser(userName){
-    const response = await fetch(`${baseUrl}/${userName}`)
-    return await response.json()
-}
-
-async function searchRepos(userName){
-    const response = await fetch(`${baseUrl}/${userName}/repos?per_page=${reposQtd}`)
-    return await response.json()
-}
-
 function getUserProfile(userName){
     searchUser(userName).then(userData =>{
-
-        repos(userName).then(reposData => console.log(reposData))
 
         let userInfo = `
         

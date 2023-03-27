@@ -1,4 +1,4 @@
-import { baseUrl, reposQtd } from "./variables"
+import { baseUrl, reposQtd } from "./../variables.js"
 
 async function searchRepos(userName){
     const response = await fetch(`${baseUrl}/${userName}/repos?per_page=${reposQtd}`)
