@@ -19,12 +19,12 @@ async function searchUser(userName){
 }
 
 async function searchRepos(userName){
-    const response = await fetch(`https://api.github.com/users/${userName}/repos`)
+    const response = await fetch(`https://api.github.com/users/${userName}/repos?per_page=10`)
     return await response.json()
 }
 
 function getUserProfile(userName){
-    user(userName).then(userData =>{
+    searchUser(userName).then(userData =>{
 
         repos(userName).then(reposData => console.log(reposData))
 
@@ -45,7 +45,7 @@ function getUserProfile(userName){
 }
 
 function getUserRepositories(userName){
-    repos(userName).then(reposData =>{
+    searchRepos(userName).then(reposData =>{
         let repositoriesItens = ""
         reposData.forEach(repo =>{
             repositoriesItens += `<li><a href="${repo.html_url}" target="blank">${repo.name}</a></li>`
