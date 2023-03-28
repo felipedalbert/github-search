@@ -1,6 +1,8 @@
 import { searchUser } from "./services/user.js"
 import { searchRepos } from "./services/repositories.js"
 
+import { user } from "./objects/user"
+
 document.getElementById('btn-search').addEventListener('click', ()=>{
     const userNameInputValue = document.getElementById('input-search').value
     getUserProfile(userNameInputValue)
