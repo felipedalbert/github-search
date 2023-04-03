@@ -2,6 +2,7 @@ import { searchUser } from "./services/user.js"
 import { searchRepos } from "./services/repositories.js"
 
 import { user } from "./objects/user"
+import { screen } from "./objects/screen.js"
 
 document.getElementById('btn-search').addEventListener('click', ()=>{
     const userNameInputValue = document.getElementById('input-search').value
@@ -23,21 +24,7 @@ async function getUserProfile(userName){
     const userResponse = await searchUser(userName)
     user.setInfo(userResponse)
 
-    // searchUser(userName).then(userData =>{
-
-    //     let userInfo = `
-        
-    //     <div class="info">
-    //         <img src="${userData.avatar_url}" alt="Pic profile">
-    //         <div class="data">
-    //             <h1>${userData.name ?? 'Não possuí nome cadastrado 🥺'}</h1>
-    //             <p>${userData.bio ?? 'Não possuí bio cadastrada 😢'}</p>
-    //         </div>
-    //     </div>
-        
-    // `
-    // document.querySelector('.profile-data').innerHTML = userInfo
-    // })
+    screen.renderUser(user)
 
 }
 
