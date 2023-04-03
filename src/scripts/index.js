@@ -18,22 +18,25 @@ document.getElementById('input-search').addEventListener("keyup", (e)=> {
     }
 })
 
-function getUserProfile(userName){
-    searchUser(userName).then(userData =>{
+async function getUserProfile(userName){
 
-        let userInfo = `
+    const userResponse = await searchUser(userName)
+
+    // searchUser(userName).then(userData =>{
+
+    //     let userInfo = `
         
-        <div class="info">
-            <img src="${userData.avatar_url}" alt="Pic profile">
-            <div class="data">
-                <h1>${userData.name ?? 'Não possuí nome cadastrado 🥺'}</h1>
-                <p>${userData.bio ?? 'Não possuí bio cadastrada 😢'}</p>
-            </div>
-        </div>
+    //     <div class="info">
+    //         <img src="${userData.avatar_url}" alt="Pic profile">
+    //         <div class="data">
+    //             <h1>${userData.name ?? 'Não possuí nome cadastrado 🥺'}</h1>
+    //             <p>${userData.bio ?? 'Não possuí bio cadastrada 😢'}</p>
+    //         </div>
+    //     </div>
         
-    `
-    document.querySelector('.profile-data').innerHTML = userInfo
-    })
+    // `
+    // document.querySelector('.profile-data').innerHTML = userInfo
+    // })
 
 }
 
