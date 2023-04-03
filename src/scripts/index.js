@@ -21,6 +21,7 @@ document.getElementById('input-search').addEventListener("keyup", (e)=> {
 async function getUserProfile(userName){
 
     const userResponse = await searchUser(userName)
+    user.setInfo(userResponse)
 
     // searchUser(userName).then(userData =>{
 
