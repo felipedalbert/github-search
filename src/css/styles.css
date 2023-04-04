@@ -38,7 +38,7 @@ main {
   width: 60%; /* se for uma tela menor que 980px vai se adaptar a 70% */
   max-width: 960px; /* quando chegar em 980px para de aumentar */
   box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
-  background-color: #fff;
+  background-color: #f7f3fb;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,12 +77,13 @@ main {
   border-radius: 7px;  
   cursor: pointer;
   border: 1px solid grey;
+  transition: .2s ease-in-out;
 }
 
 .container header #btn-search:hover {
-  background-color: hotpink;
-  color: #ffffff;
-  border-color: #ffffff;
+  background-color: rgb(248, 87, 243);
+  color: #f7f3fb;
+  border-color: #f7f3fb;
 }
 
 .container .profile-data{
@@ -106,19 +107,21 @@ main {
 .container .profile-data .info img{
   width: 50%;
   border-radius: 50%;
-  border: 10px solid hotpink;
+  border: 10px solid rgb(163, 105, 255);
 }
 
 .container .profile-data .info h1{
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: 700;
+  color: rgb(238, 61, 211);
 }
 
 .container .profile-data .info p{
   font-size: 15px;  
   font-weight: 400;
   line-height: 23px;
+  color: rgb(78, 63, 147);
 }
 
 /* REPOSITORIES */
@@ -144,7 +147,8 @@ main {
 }
 
 .container .profile-data .repositories ul li a:hover{
-  background-color:hotpink;
+  background-color:rgb(163, 105, 255);
+  border-color: #fff;
   color: #fff
 }
 
