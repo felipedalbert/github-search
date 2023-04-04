@@ -27,8 +27,13 @@ function validateEmptyInput(userName){
 }
 
 async function getUserData (userName){
-
     const userResponse = await searchUser(userName)
+
+    if(userResponse.message === 'Not Found'){
+        screen.renderNotFound()
+        return
+    }
+
     const reposResponse = await searchRepos(userName)
 
     user.setInfo(userResponse)
