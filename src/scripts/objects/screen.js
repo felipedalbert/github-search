@@ -1,5 +1,6 @@
 const screen = {
     userProfile: document.querySelector('.profile-data'),
+    
     renderUser(user){
         this.userProfile.innerHTML = 
             `
