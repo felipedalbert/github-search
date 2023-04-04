@@ -6,40 +6,25 @@ import { screen } from "./objects/screen.js"
 
 document.getElementById('btn-search').addEventListener('click', ()=>{
     const userNameInputValue = document.getElementById('input-search').value
-    getUserProfile(userNameInputValue)
-    getUserRepositories(userNameInputValue)
+    getUserData(userNameInputValue)
 })
-
 
 document.getElementById('input-search').addEventListener("keyup", (e)=> {
     const userNameInputValue = e.target.value
+
     if (e.key === "Enter") {
-        getUserProfile(userNameInputValue)
-        getUserRepositories(userNameInputValue)
+        getUserData(userNameInputValue)
     }
 })
 
-async function getUserProfile(userName){
+async function getUserData (userName){
 
     const userResponse = await searchUser(userName)
+    const reposResponse = await searchRepos(userName)
+
     user.setInfo(userResponse)
+    user.setRepositories(reposResponse)
 
     screen.renderUser(user)
 
-}
-
-function getUserRepositories(userName){
-    searchRepos(userName).then(reposData =>{
-        let repositoriesItens = ""
-        reposData.forEach(repo =>{
-            repositoriesItens += `<li><a href="${repo.html_url}" target="blank">${repo.name}</a></li>`
-        })
-
-        document.querySelector('.profile-data').innerHTML += `
-            <div class="repositories section">
-                <h2>Repositórios</h2>
-                <ul>${repositoriesItens}</ul>
-            </div>
-        `
-    })
 }
