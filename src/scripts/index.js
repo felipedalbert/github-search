@@ -1,5 +1,6 @@
 import { searchUser } from "./services/user.js"
 import { searchRepos } from "./services/repositories.js"
+import { searchEvents } from "./services/userEvents.js"
 
 import { user } from "./objects/user.js"
 import { screen } from "./objects/screen.js"
@@ -35,9 +36,12 @@ async function getUserData (userName){
     }
 
     const reposResponse = await searchRepos(userName)
+    const eventsResponse = await searchEvents(userName)
 
     user.setInfo(userResponse)
     user.setRepositories(reposResponse)
+    user.setEvents(eventsResponse)
+   
 
     screen.renderUser(user)
 

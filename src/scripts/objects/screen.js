@@ -27,8 +27,7 @@ const screen = {
                 </div>
             `
         }
-
-        
+     
     },
 
     renderNotFound(){
