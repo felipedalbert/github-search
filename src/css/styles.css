@@ -93,6 +93,10 @@ main {
   padding: 40px;  
 }
 
+.container .profile-data span{
+  font-weight: 700;
+}
+
 .container .profile-data .info {
   display: flex;  
   flex-wrap: wrap;
@@ -126,10 +130,6 @@ main {
 
 .container .profile-data .info .follow-info{
   margin-top: 20px;
-}
-
-.container .profile-data .info .follow-info span{
-  font-weight: 700;
 }
 
 /* REPOSITORIES */

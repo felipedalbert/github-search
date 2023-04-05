@@ -15,7 +15,7 @@ const screen = {
             
             `
         
-        let repositoriesItens = ""
+        let repositoriesItens = ''
         
         if(user.repositories.length > 0){
             user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="blank">${repo.name}</a></li>`)
@@ -27,7 +27,18 @@ const screen = {
                 </div>
             `
         }
-     
+
+        let eventItens = ''
+
+        user.events.forEach(userEvent => eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>`)
+
+        document.querySelector('.profile-data').innerHTML += `
+            <div class="event section">
+                <h2>Eventos recentes</h2>
+                <ul>${eventItens}</ul>
+            </div>
+        `
+
     },
 
     renderNotFound(){
