@@ -31,7 +31,7 @@ main {
 }
 
 .section{
-  padding: 70px 0;
+  padding: 60px 0 50px 0;
 }
 
 .container {
@@ -160,6 +160,24 @@ main {
   color: #fff
 }
 
-.container .profile-data.hide{
-  display: none;
+.container .profile-data .user-events{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  background-color: #e9e8e8;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.container .profile-data .user-events ul{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  text-align: justify;
+}
+
+.container .profile-data .user-events ul li{
+  background-color: #9770fa;
+  padding: 5px;
+  border-radius: 5px;
 }

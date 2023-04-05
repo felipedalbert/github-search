@@ -33,7 +33,7 @@ const screen = {
         user.events.forEach(userEvent => eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>`)
 
         document.querySelector('.profile-data').innerHTML += `
-            <div class="event section">
+            <div class="user-events">
                 <h2>Eventos recentes</h2>
                 <ul>${eventItens}</ul>
             </div>
