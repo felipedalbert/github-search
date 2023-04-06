@@ -23,7 +23,7 @@
     }
   }
   
-  @media (max-width: 425px) {
+  @media (max-width: 540px) {
     main {
       padding: 15% 0;    
     }
