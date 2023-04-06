@@ -67,6 +67,12 @@ main {
   padding: 10px;
   border-radius: 7px;
   border: 1px solid grey;
+  transition: ease-in-out .2s;
+}
+
+.container header #input-search:focus, .container header #input-search:hover{
+  outline: none;
+  box-shadow: rgba(248, 87, 243, 0.801) 4px 4px 8px 0px;;
 }
 
 .container header #btn-search {
