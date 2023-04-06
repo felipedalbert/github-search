@@ -72,7 +72,7 @@ main {
 
 .container header #input-search:focus, .container header #input-search:hover{
   outline: none;
-  box-shadow: rgba(248, 87, 243, 0.801) 4px 4px 8px 0px;;
+  box-shadow: rgba(163, 105, 255, 0.801) 4px 4px 8px 0px;;
 }
 
 .container header #btn-search {
@@ -82,7 +82,9 @@ main {
   padding: 10px;
   border-radius: 7px;  
   cursor: pointer;
-  border: 1px solid grey;
+  box-shadow: rgba(165, 149, 161, 0.346) 0px 5px 20px 2px;
+  border: none;
+  background-color: #f4f0f8;
   transition: .2s ease-in-out;
 }
 
