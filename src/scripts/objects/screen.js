@@ -21,13 +21,13 @@ const screen = {
             user.repositories.forEach(repo => repositoriesItens += `
                 <li>
                     <a href="${repo.html_url}" target="blank">
-                        <div class"repo-name">${repo.name}</div>
-                        
+                        <div class="repo-name">${repo.name}</div>
+
                         <div class="info-repo">
-                            <div class"itens-info-repo">🍴 ${repo.forks_count}</div>
-                            <div class"itens-info-repo">🌟 ${repo.stargazers_count}</div>
-                            <div class"itens-info-repo">👀 ${repo.watchers_count}</div>
-                            <div class"itens-info-repo">👨‍💻 ${repo.language}</div>
+                            <div class="itens-info-repo">🍴 ${repo.forks_count}</div>
+                            <div class="itens-info-repo">🌟 ${repo.stargazers_count}</div>
+                            <div class="itens-info-repo">👀 ${repo.watchers_count}</div>
+                            <div class="itens-info-repo">👨‍💻 ${repo.language}</div>
                         </div>
                     </a>
                     

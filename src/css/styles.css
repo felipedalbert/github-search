@@ -55,7 +55,7 @@ main {
 }
 
 .container header h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 30px;
 }
@@ -78,7 +78,7 @@ main {
 .container header #btn-search {
   width: 200px;
   font-size: 17px;
-  margin: 20px auto 0;
+  margin: 30px auto 0;
   padding: 10px;
   border-radius: 7px;  
   cursor: pointer;
@@ -154,12 +154,15 @@ main {
 }
 
 .container .profile-data .repositories ul li a{
-  padding: 20px;
+  padding: 15px;
   border: 1px solid grey;  
   margin: 20px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: center;
   border-radius: 7px;
-  transition: 0.3s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .container .profile-data .repositories ul li a:hover{
@@ -167,6 +170,27 @@ main {
   border-color: #fff;
   color: #fff
 }
+
+.container .profile-data .repositories ul li a .repo-name{
+  font-weight: 700;
+}
+
+.container .profile-data .repositories ul li a .info-repo{
+  display: flex;
+  column-gap: 5px;
+}
+
+.container .profile-data .repositories ul li a .info-repo .itens-info-repo{
+  background-color: rgb(255, 115, 250);
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.container .profile-data .repositories ul li a:hover > .info-repo .itens-info-repo{
+  background-color: unset;
+  outline: solid 1px rgb(251, 118, 247);
+}
+
 
 .container .profile-data .user-events{
   display: flex;
