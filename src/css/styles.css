@@ -196,20 +196,22 @@ main {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
-  background-color: #e9e8e8;
+  background-color: #f4f0f8;
   padding: 30px;
   border-radius: 12px;
+  box-shadow: rgba(165, 149, 161, 0.346) 0px 4px 20px 3px;
 }
 
 .container .profile-data .user-events ul{
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 8px;
   text-align: justify;
 }
 
 .container .profile-data .user-events ul li{
-  background-color: #9770fa;
+  background-color: #f7f3fc;
   padding: 5px;
   border-radius: 5px;
+  box-shadow: rgba(186, 119, 234, 0.182) 0px 2px 4px 1px;
 }

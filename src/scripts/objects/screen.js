@@ -49,7 +49,7 @@ const screen = {
 
         document.querySelector('.profile-data').innerHTML += `
             <div class="user-events">
-                <h2>Eventos recentes</h2>
+                <h2>Commits recentes</h2>
                 <ul>${eventItens}</ul>
             </div>
         `
