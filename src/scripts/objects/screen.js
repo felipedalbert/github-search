@@ -53,7 +53,7 @@ const screen = {
                 let eventItens = ''
 
                 user.events.forEach(userEvent =>{
-                    if(userEvent.type === 'CreateEvent' || userEvent.type === 'PushEvent'){
+                    if(['CreateEvent', 'PushEvent'].includes(userEvent.type)){
                         eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>`
                     }
                 })
