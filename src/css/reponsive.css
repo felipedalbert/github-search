@@ -19,6 +19,22 @@
     .container .profile-data .repositories ul li{
       flex-basis: 100%;
     }
+
+    .container .profile-data .info{
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    .container .profile-data .info img
+    {
+      width: 50vw;
+      padding: 0;
+    }
+
+    .container .profile-data .info .data{
+      width: 100%;
+    }
   }
   
   @media (max-width: 540px) {
