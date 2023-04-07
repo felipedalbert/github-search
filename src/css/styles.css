@@ -218,7 +218,7 @@ main {
 
 .container .profile-data .user-events ul li{
   background-color: #f7f3fc;
-  padding: 5px;
+  padding: 8px;
   border-radius: 5px;
   box-shadow: rgba(186, 119, 234, 0.182) 0px 2px 4px 1px;
 }
