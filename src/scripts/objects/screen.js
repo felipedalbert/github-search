@@ -21,46 +21,51 @@ const screen = {
             
             `
         
-        let repositoriesItens = ''
-        
-        if(user.repositories.length > 0){
-            user.repositories.forEach(repo => repositoriesItens += `
-                <li>
-                    <a href="${repo.html_url}" target="blank">
-                        <div class="repo-name">${repo.name}</div>
-
-                        <div class="info-repo">
-                            <div class="itens-info-repo">🍴 ${repo.forks_count}</div>
-                            <div class="itens-info-repo">🌟 ${repo.stargazers_count}</div>
-                            <div class="itens-info-repo">👀 ${repo.watchers_count}</div>
-                            <div class="itens-info-repo">👨‍💻 ${repo.language}</div>
-                        </div>
-                    </a>
-                    
-                </li>
+            let repositoriesItens = ''
             
-            `)
+            if(user.repositories.length > 0){
+                user.repositories.forEach(repo => repositoriesItens += `
+                    <li>
+                        <a href="${repo.html_url}" target="blank">
+                            <div class="repo-name">${repo.name}</div>
 
-            document.querySelector('.profile-data').innerHTML += `
-                <div class="repositories section">
-                    <h2>Repositórios</h2>
-                    <ul>${repositoriesItens}</ul>
-                </div>
-            `
-        }
+                            <div class="info-repo">
+                                <div class="itens-info-repo">🍴 ${repo.forks_count}</div>
+                                <div class="itens-info-repo">🌟 ${repo.stargazers_count}</div>
+                                <div class="itens-info-repo">👀 ${repo.watchers_count}</div>
+                                <div class="itens-info-repo">👨‍💻 ${repo.language}</div>
+                            </div>
+                        </a>
+                        
+                    </li>
+                
+                `)
 
-        if(user.events.length === 0) return
+                document.querySelector('.profile-data').innerHTML += `
+                    <div class="repositories section">
+                        <h2>Repositórios</h2>
+                        <ul>${repositoriesItens}</ul>
+                    </div>
+                `
+            }
 
-        let eventItens = ''
+            if(user.events.length > 0){
+                let eventItens = ''
 
-        user.events.forEach(userEvent => eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>`)
+                user.events.forEach(userEvent =>{
+                    if(userEvent.type === 'CreateEvent' || userEvent.type === 'PushEvent'){
+                        eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>`
+                    }
+                })
 
-        document.querySelector('.profile-data').innerHTML += `
-            <div class="user-events">
-                <h2>Commits recentes</h2>
-                <ul>${eventItens}</ul>
-            </div>
-        `
+                document.querySelector('.profile-data').innerHTML += `
+                    <div class="user-events">
+                        <h2>Commits recentes</h2>
+                        <ul>${eventItens}</ul>
+                    </div>
+                `
+            }
+
         }, 1700);
     },
 
