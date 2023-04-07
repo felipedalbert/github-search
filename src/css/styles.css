@@ -35,7 +35,7 @@ main {
 }
 
 .container {
-  width: 70%; /* se for uma tela menor que 980px vai se adaptar a 70% */
+  width: 60%; /* se for uma tela menor que 980px vai se adaptar a 70% */
   max-width: 980px; /* quando chegar em 980px para de aumentar */
   box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
   background-color: #f7f3fb;
