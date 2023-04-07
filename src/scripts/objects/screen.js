@@ -55,10 +55,6 @@ const screen = {
                 <ul>${eventItens}</ul>
             </div>
         `
-
-
-        
-
     },
 
     renderNotFound(){
