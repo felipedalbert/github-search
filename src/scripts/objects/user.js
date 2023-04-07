@@ -3,10 +3,11 @@ const user = {
     name: '',
     bio: '',
     userName: '',
+    url: '',
     repositories: [],
     followers: '',
     following: '',
-    events:'',
+    events: [],
 
     setInfo(gitHubUser){
         this.avatarUrl = gitHubUser.avatar_url
@@ -24,6 +25,8 @@ const user = {
 
     setEvents(events){
         this.events = events
+
+        console.log(this.events)
     }
     
 }

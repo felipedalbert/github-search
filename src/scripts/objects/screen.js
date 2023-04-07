@@ -43,6 +43,8 @@ const screen = {
             `
         }
 
+        if(user.events.length === 0) return
+
         let eventItens = ''
 
         user.events.forEach(userEvent => eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>`)
@@ -53,6 +55,9 @@ const screen = {
                 <ul>${eventItens}</ul>
             </div>
         `
+
+
+        
 
     },
 

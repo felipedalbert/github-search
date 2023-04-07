@@ -217,6 +217,10 @@ main {
   box-shadow: rgba(165, 149, 161, 0.346) 0px 4px 20px 3px;
 }
 
+.container .profile-data .inactive.user-events{
+  display: none;
+}
+
 .container .profile-data .user-events ul{
   display: flex;
   flex-direction: column;
