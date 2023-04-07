@@ -98,7 +98,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;  
+}
+
+.container .active.profile-data{
+  padding: 40px
 }
 
 .container .profile-data span{

@@ -5,7 +5,6 @@ import { searchEvents } from "./services/userEvents.js"
 import { user } from "./objects/user.js"
 import { screen } from "./objects/screen.js"
 
-
 document.getElementById('btn-search').addEventListener('click', ()=>{
     const userNameInputValue = document.getElementById('input-search').value
     if (validateEmptyInput(userNameInputValue)) return
@@ -44,5 +43,7 @@ async function getUserData (userName){
    
 
     screen.renderUser(user)
+
+    document.querySelector('.profile-data').classList.add('active')
 
 }
