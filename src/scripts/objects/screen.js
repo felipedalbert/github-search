@@ -7,7 +7,7 @@ const screen = {
                 <div class="info">
                     <img src="${user.avatarUrl}" alt="Pic profile">
                     <div class="data">
-                        <h1>${user.name ?? 'Não possuí nome cadastrado 🥺'}</h1>
+                        <h1><a href="${user.url}" target="blank">${user.name ?? 'Não possuí nome cadastrado 🥺'}<a></h1>
                         <p>${user.bio ?? 'Não possuí bio cadastrada 😢'}</p>
                         <p class="follow-info">👥 <span>${user.followers}</span> seguidores · <span>${user.following}</span> seguindo</p>
                     </div>

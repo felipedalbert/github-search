@@ -13,6 +13,7 @@ const user = {
         this.name = gitHubUser.name
         this.bio = gitHubUser.bio
         this.userName = gitHubUser.login
+        this.url = gitHubUser.html_url
         this.followers = gitHubUser.followers
         this.following = gitHubUser.following
     },
