@@ -16,10 +16,8 @@
   }
   
   @media (max-width: 768px) {
-    .container header #input-search,
-    .container header #btn-search
-    {
-      width: 100%;
+    .container .profile-data .repositories ul li{
+      flex-basis: 100%;
     }
   }
   
@@ -27,7 +25,13 @@
     main {
       padding: 15% 0;    
     }
-  
+
+    .container header #input-search,
+    .container header #btn-search
+    {
+      width: 100%;
+    }
+    
     .container .profile-data .info img{
       margin-bottom: 20px;
     }
