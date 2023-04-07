@@ -2,7 +2,13 @@ const screen = {
     userProfile: document.querySelector('.profile-data'),
 
     renderUser(user){
-        this.userProfile.innerHTML = 
+        this.userProfile.classList.remove('active')
+        this.userProfile.innerHTML = `<img class="loading" src="src/images/loading.svg">`
+        
+        setTimeout(() => {
+            this.userProfile.classList.add('active')
+
+            this.userProfile.innerHTML = 
             `
                 <div class="info">
                     <img src="${user.avatarUrl}" alt="Pic profile">
@@ -55,6 +61,7 @@ const screen = {
                 <ul>${eventItens}</ul>
             </div>
         `
+        }, 1700);
     },
 
     renderNotFound(){

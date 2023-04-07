@@ -35,8 +35,8 @@ main {
 }
 
 .container {
-  width: 60%; /* se for uma tela menor que 980px vai se adaptar a 70% */
-  max-width: 980px; /* quando chegar em 980px para de aumentar */
+  width: 60%;
+  max-width: 980px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
   background-color: #f7f3fb;
   display: flex;
@@ -45,6 +45,11 @@ main {
   border-radius: 30px;
   padding: 30px;
   margin: 0 auto;
+}
+
+.container .loading{
+  width: 70px;
+  margin: -10px 0 -10px 0;
 }
 
 .container header {
@@ -98,7 +103,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0px;
 }
+
+/* .container .loading.profile-data{
+  padding: 0px;
+} */
 
 .container .active.profile-data{
   padding: 40px

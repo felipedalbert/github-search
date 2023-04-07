@@ -43,7 +43,4 @@ async function getUserData (userName){
    
 
     screen.renderUser(user)
-
-    document.querySelector('.profile-data').classList.add('active')
-
 }
