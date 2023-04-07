@@ -35,8 +35,8 @@ main {
 }
 
 .container {
-  width: 60%;
-  max-width: 980px;
+
+  max-width: 870px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
   background-color: #f7f3fb;
   display: flex;
