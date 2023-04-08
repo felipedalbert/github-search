@@ -21,7 +21,7 @@ document.getElementById('input-search').addEventListener("keyup", (e)=> {
 
 function validateEmptyInput(userName){
     if(userName.length === 0){
-        alert('Preencha o campo com o nome de usuário do GitHUb')
+        alert('Preencha o campo com o nome de usuário do GitHub')
         return true
     }
 }
