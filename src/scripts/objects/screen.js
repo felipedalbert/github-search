@@ -50,13 +50,19 @@ const screen = {
             }
 
             if(user.events.length > 0){
+
                 let eventItens = ''
 
                 user.events.forEach(userEvent =>{
+
                     if(['CreateEvent', 'PushEvent'].includes(userEvent.type)){
                         eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>`
+                    }else{
+                        return
                     }
                 })
+
+                console.log(eventItens)
 
                 document.querySelector('.profile-data').innerHTML += `
                     <div class="user-events">
@@ -73,6 +79,5 @@ const screen = {
         this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3"
     }
 }
-
 
 export {screen}
