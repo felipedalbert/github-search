@@ -1,61 +1,61 @@
 @media (max-width: 1280px) {
-    .container {
-      flex-direction: column;
-      width: 90%;
-      border-radius: 20px;
-    }
+  .container {
+    flex-direction: column;
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  .container header {
+    width: 100%;
+  }
+
+  .container header h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+}
   
-    .container header {
-      width: 100%;
-    }
+@media (max-width: 768px) {
+  .container .profile-data .repositories ul li{
+    flex-basis: 100%;
+  }
+
+  .container .profile-data .info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .container .profile-data .info img
+  {
+    width: 50vw;
+    padding: 0;
+  }
+
+  .container .profile-data .info .data{
+    width: 100%;
+  }
+}
   
-    .container header h1 {
-      font-size: 24px;
-      text-align: center;
-    }
+@media (max-width: 540px) {
+  main {
+    padding: 15% 0;    
+  }
+
+  .container header #input-search,
+  .container header #btn-search
+  {
+    width: 100%;
   }
   
-  @media (max-width: 768px) {
-    .container .profile-data .repositories ul li{
-      flex-basis: 100%;
-    }
-
-    .container .profile-data .info{
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-    }
-
-    .container .profile-data .info img
-    {
-      width: 50vw;
-      padding: 0;
-    }
-
-    .container .profile-data .info .data{
-      width: 100%;
-    }
+  .container .profile-data .info img{
+    margin-bottom: 20px;
   }
-  
-  @media (max-width: 540px) {
-    main {
-      padding: 15% 0;    
-    }
 
-    .container header #input-search,
-    .container header #btn-search
-    {
-      width: 100%;
-    }
-    
-    .container .profile-data .info img{
-      margin-bottom: 20px;
-    }
-  
-    .container .profile-data .info img,
-    .container .profile-data .info .data
-    {
-      width: 100%;
-      padding: 0;
-    }
+  .container .profile-data .info img,
+  .container .profile-data .info .data
+  {
+    width: 100%;
+    padding: 0;
   }
+}
