@@ -59,3 +59,10 @@
     padding: 0;
   }
 }
+
+@media (max-width: 375px){
+  .container .profile-data .user-events{
+    box-shadow: none;
+    padding: 0;
+  }
+}
