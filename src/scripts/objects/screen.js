@@ -48,7 +48,6 @@ const screen = {
                     </div>
                 `
             }
-            console.log(user.events)
 
             let filteredEvents = user.events.filter(unitEvent => unitEvent.type === 'CreateEvent' || unitEvent.type === 'PushEvent')
 
