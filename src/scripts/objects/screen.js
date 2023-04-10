@@ -56,12 +56,8 @@ const screen = {
                 let eventItens = ''
 
                 filteredEvents.forEach(userEvent =>{
-                    
-                    if(userEvent.type === 'PushEvent'){
-                        eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>`
-                    }else{
-                        eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.description}</li>`
-                    }
+                
+                    eventItens += userEvent.type === 'pushEvent' ? `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>` : `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.description}</li>`
                 })
                     
 
