@@ -49,7 +49,7 @@ const screen = {
                 `
             }
 
-            let filteredEvents = user.events.filter(unitEvent => unitEvent.type === 'CreateEvent' || unitEvent.type === 'PushEvent')
+            let filteredEvents = user.events.filter(unitEvent => ['PushEvent', 'CreateEvent'].includes(unitEvent.type))
 
             if(filteredEvents.length > 0){
 
