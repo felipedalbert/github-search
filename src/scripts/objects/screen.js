@@ -33,7 +33,7 @@ const screen = {
                                 <div class="itens-info-repo">🍴 ${repo.forks_count}</div>
                                 <div class="itens-info-repo">🌟 ${repo.stargazers_count}</div>
                                 <div class="itens-info-repo">👀 ${repo.watchers_count}</div>
-                                <div class="itens-info-repo">👨‍💻 ${repo.language}</div>
+                                <div class="itens-info-repo">👨‍💻 ${repo.language ?? '--'}</div>
                             </div>
                         </a>
                         
