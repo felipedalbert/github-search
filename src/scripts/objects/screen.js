@@ -51,13 +51,19 @@ const screen = {
 
             let filteredEvents = user.events.filter(unitEvent => unitEvent.type === 'CreateEvent' || unitEvent.type === 'PushEvent')
 
-            console.log(filteredEvents)
-
             if(filteredEvents.length > 0){
 
                 let eventItens = ''
 
-                filteredEvents.forEach(userEvent => eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>`)
+                filteredEvents.forEach(userEvent =>{
+                    
+                    if(userEvent.type === 'PushEvent'){
+                        eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>`
+                    }else{
+                        eventItens += `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.description}</li>`
+                    }
+                })
+                    
 
                 document.querySelector('.profile-data').innerHTML += `
                     <div class="user-events">
