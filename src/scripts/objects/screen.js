@@ -48,6 +48,7 @@ const screen = {
                     </div>
                 `
             }
+            console.log(user.events)
 
             let filteredEvents = user.events.filter(unitEvent => unitEvent.type === 'CreateEvent' || unitEvent.type === 'PushEvent')
 
@@ -56,8 +57,8 @@ const screen = {
                 let eventItens = ''
 
                 filteredEvents.forEach(userEvent =>{
-                
-                    eventItens += userEvent.type === 'pushEvent' ? `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>` : `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.description}</li>`
+
+                    eventItens += userEvent.type === 'PushEvent' ? `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.commits[0].message}</li>` : `<li><span>${userEvent.repo.name}</span> - ${userEvent.payload.description}</li>`
                 })
                     
 
